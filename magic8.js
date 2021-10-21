@@ -7,6 +7,7 @@ let submitErrorAdded = false;
 
 // hide loader
 loader.style.display = 'none';
+// add class to submit btn for styling
 submit.classList.add('submit-btn-enabled');
 
 const editErrorNode = () => {
@@ -22,6 +23,7 @@ const editErrorNode = () => {
         // change box to red
         input.style.border = '1px solid red';
 
+        // styling changes
         inputErrorAdded = true;
         submit.disabled = true;
         submit.classList.remove('submit-btn-enabled');
@@ -33,6 +35,7 @@ const editErrorNode = () => {
         // remove red styling
         input.style.border = '1px solid black';
         
+        // styling chnages
         inputErrorAdded = false;
         submit.disabled = false;
         submit.classList.add('submit-btn-enabled');
@@ -40,6 +43,7 @@ const editErrorNode = () => {
 };
 
 input.addEventListener('blur', () => {
+    // disable submit btn on blank input
     if (input.value === '') {
         submit.disabled = true;
     }
